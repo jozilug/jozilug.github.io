@@ -15,7 +15,7 @@ You'll need the following ruby gems for the site to build properly:
 You will also need to create a file called ``_secrets.yml`` in the
 root directory of the site populated with your Meetup API key.  You
 can generate this key by going
-(here)[https://secure.meetup.com/meetup_api/key/].  The contents of
+[here](https://secure.meetup.com/meetup_api/key/).  The contents of
 this file should look like ``meetup_api_key: [your key here]``.
 
 From the root directory of the site, run ``jekyll build --serve`` to
