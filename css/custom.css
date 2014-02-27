@@ -1,0 +1,59 @@
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.jumbotron {
+    background-image: url('/images/cover.jpg');
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: "Helvetica Neue", "Ubuntu", sans-serif;
+}
+.row h4, .row p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.jumbotron p {
+    max-width: 500px;
+}
+.jumbotron .container {
+    width: 500px;
+    margin-right: 0px;
+}
+.row img {
+    padding: 3px;
+    margin: 3px;
+    border: 1px solid #ddd;
+}
+.jumbotron a {
+    color: white;
+}
+.blanco {
+    color: white !important;
+}
+@media (min-width: 768px) {
+    .friendly {
+	display: none;
+    }
+}
+footer ul {
+    padding-left: 0;
+}
+footer li {
+    display: inline;
+}
+
+footer li + li {
+    float: right;
+}
+.recent {
+    text-align: center;
+}
+.recent ul {
+    list-style-type: none;
+    padding: 15px 0;
+    border-top: 1px solid rgb(238,238,238);
+    border-bottom: 1px solid rgb(238,238,238);
+}
