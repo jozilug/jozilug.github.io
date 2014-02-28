@@ -22,7 +22,7 @@ can generate this key by going
 this file should look like ``meetup_api_key: [your key here]``.
 
 From the root directory of the site, run ``jekyll build`` to output
-the site to the _site subdirectory.  Run ``jekyll build --serve`` to
-see the site hosted locally at 0.0.0.0:4000.
+the site to the _site subdirectory.  Run ``jekyll serve`` to see the
+site hosted locally at 0.0.0.0:4000.
 
 Cheers!
