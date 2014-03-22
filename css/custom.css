@@ -1,3 +1,12 @@
+@media(max-width:767px) {
+    .img-centered, .text-centered {
+	margin: 0 auto !important;
+    }
+    .text-centered {
+	max-width: 400px;
+
+    }
+}
 body {
   padding-top: 50px;
   padding-bottom: 20px;
