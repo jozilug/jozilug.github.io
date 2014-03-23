@@ -1,0 +1,35 @@
+---
+layout: none
+permalink: /.htaccess
+---
+
+Options -Indexes +FollowSymLinks
+RewriteEngine on
+RewriteBase /
+FileETag none
+
+# Hides .htaccess
+<Files .htaccess>
+    order allow,deny
+    deny from all
+</Files>
+
+# Fakes gzip compression
+Header add Vary accept-encoding
+RewriteCond %{HTTP:accept-encoding} gzip
+RewriteCond %{REQUEST_FILENAME} !\.gz$
+RewriteCond %{REQUEST_FILENAME}.gz -f
+RewriteRule (.*) $1.gz
+
+# Add default Expires header: http://developer.yahoo.com/performance/rules.html#expires
+<ifModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 seconds"
+  ExpiresByType text/html "access plus 1 seconds"
+  ExpiresByType image/gif "access plus 2592000 seconds"
+  ExpiresByType image/jpeg "access plus 2592000 seconds"
+  ExpiresByType image/png "access plus 2592000 seconds"
+  ExpiresByType text/css "access plus 604800 seconds"
+  ExpiresByType text/javascript "access plus 216000 seconds"
+  ExpiresByType application/x-javascript "access plus 216000 seconds"
+</ifModule>
