@@ -14,14 +14,16 @@ FileETag none
     deny from all
 </Files>
 
-# Fakes gzip compression
+# Fakes gzip compression for use on NearlyFreeSpeech, requires a
+# separate gzipping process during build
 Header add Vary accept-encoding
 RewriteCond %{HTTP:accept-encoding} gzip
 RewriteCond %{REQUEST_FILENAME} !\.gz$
 RewriteCond %{REQUEST_FILENAME}.gz -f
 RewriteRule (.*) $1.gz
 
-# Add default Expires header: http://developer.yahoo.com/performance/rules.html#expires
+# Add default Expires header:
+# http://developer.yahoo.com/performance/rules.html#expires
 <ifModule mod_expires.c>
   ExpiresActive On
   ExpiresDefault "access plus 1 seconds"
