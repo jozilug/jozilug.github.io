@@ -4,3 +4,5 @@ _site/
 [#]*[#]
 .\#*
 _secrets.yml
+_extras/
+Makefile

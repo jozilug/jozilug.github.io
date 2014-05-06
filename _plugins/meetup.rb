@@ -10,8 +10,12 @@ module Jekyll
       secrets = YAML.load(File.read('_secrets.yml'))
       meetup = RMeetup::Client
       meetup.api_key = secrets['meetup_api_key']
-      @events = meetup.fetch(:events,
-                             group_urlname: 'Jozi-Linux-User-Group-JLUG')
+      begin
+        @events = meetup.fetch(:events,
+                               group_urlname: 'Jozi-Linux-User-Group-JLUG')
+        rescue
+        @events = []
+      end
       @text = text.split(' ').first
     end
 
@@ -19,8 +23,8 @@ module Jekyll
       mab = Markaby::Builder.new
       if @text == 'latest'
         if @events.empty?
-          mab.a href: 'http://www.google.com' do
-            'No meetup scheduled yet'
+          mab.a href: 'http://www.meetup.com/Jozi-Linux-User-Group-JLUG' do
+            'No meetup scheduled yet. Why don\'t you suggest one?'
           end
         else
           event = @events.first
