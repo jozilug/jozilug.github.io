@@ -1,10 +1,14 @@
+---
+layout: post
+---
+
 Constitution
 ============
 
 Interpretation
 --------------
 
-"The Johannesburg Linux User Group (or JoziLUG) shall mean the members of the Group and any honorary members appointed in terms of this constitution.
+"The Johannesburg Linux User Group" (or JoziLUG) shall mean the members of the Group and any honorary members appointed in terms of this constitution.
 "Member" shall mean a member of the Group.
 
 "Committee Member" indicates a member of the Committee, who has been duly elected in terms of this constitution, including any member of the Group who has been co-opted by the Committee in terms of this constitution.
@@ -39,7 +43,7 @@ Committee Meeting
 -----------------
 1. A quorum for Committee meetings shall be four members.
 1. All matters before the committee shall be decided by means of a majority vote. In the event of an equal split in the votes, the Chairperson (or acting Chairperson) may exercise a casting vote.
-1. While minutes of meetings are not taken, any important decisions taken that affect CLUG will be publically announced on the [[CLUG_Mailing_Lists|clug-announce mailing list]], and thereby archived.
+1. While minutes of meetings are not taken, any important decisions taken that affect JoziLUG will be publically announced on the JoziLUG mailing list, and thereby archived.
 1. Committee meetings shall be announced by the Chairperson at least 24 hours before the proposed time of the meeting.
 
 Functions of Office Bearers
@@ -48,12 +52,12 @@ Functions of Office Bearers
 1. The Vice-Chairperson shall assist the Chairperson in the governance of the Group and may act in the stead of the Chairperson at his or her request.
 1. The Secretary shall be responsible for the taking and distribution of minutes of the Committee Meetings.
 1. The Treasurer shall:
-1. 1. Be authorised to open, administrate and operate the banking account in the name of the Group.
-1. 1.  Keep all books of account of the Group and present these, upon reasonable request, to any member.
-1. 1.  Present a financial report at every Annual General Meeting.
-1. 1.  Disburse all moneys authorized by the Committee in accordance with the provisions of this constitution and account for such disbursement to the Committee at the following meeting.
-1. 1.  Keep the financial affairs of the Group separate at all times to those of any of its members and ensure there is no conflict between the interests of the Group and any members. In the event of such conflict, the Treasurer shall report the matter to the Committee immediately.
-1. 1.  Shall ensure that all legal requirements of audit are met.
+   1. Be authorised to open, administrate and operate the banking account in the name of the Group.
+   1.  Keep all books of account of the Group and present these, upon reasonable request, to any member.
+   1.  Present a financial report at every Annual General Meeting.
+   1.  Disburse all moneys authorized by the Committee in accordance with the provisions of this constitution and account for such disbursement to the Committee at the following meeting.
+   1.  Keep the financial affairs of the Group separate at all times to those of any of its members and ensure there is no conflict between the interests of the Group and any members. In the event of such conflict, the Treasurer shall report the matter to the Committee immediately.
+   1.  Shall ensure that all legal requirements of audit are met.
 
 Definition of Responsible Roles
 -------------------------------
