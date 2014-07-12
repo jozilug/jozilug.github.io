@@ -9,10 +9,7 @@ framework.
 
 You'll need the following ruby gems for the site to build properly: 
 
-* rmagick
-* optipng
 * markaby
-* exifr
 * rmeetup
 
 You will also need to create a file called ``_secrets.yml`` in the
