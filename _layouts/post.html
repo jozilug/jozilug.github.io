@@ -22,6 +22,8 @@
       </div>
       <div class="row">
 	<div class="col-sm-8 col-sm-offset-2">
+	  <h4>{{ page.title }}</h4>
+	  <p class="postdate">{{ page.date | date: "%-d %B %Y"  }}</p>
 	  {{ content }}
 	</div>
       </div>
