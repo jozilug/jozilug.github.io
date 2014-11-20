@@ -14,6 +14,10 @@ FileETag none
     deny from all
 </Files>
 
+# Disallows referals from semalt.com
+RewriteCond %{HTTP_REFERER} semalt\.com [NC]
+RewriteRule .* - [F]
+
 # Fakes gzip compression for use on NearlyFreeSpeech, requires a
 # separate gzipping process during build
 Header add Vary accept-encoding
