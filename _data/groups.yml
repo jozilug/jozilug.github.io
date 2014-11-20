@@ -1,0 +1,15 @@
+- name: Durban Linux User Group
+  nick: DBN-LUG
+  url: http://durbanlinux.org.za
+
+- name: Gauteng Linux Users Group 
+  nick: GLUG
+  url: http://www.linux.org.za/cgi-bin/mailman/listinfo
+
+- name: Cape Linux Users Group
+  nick: CLUG
+  url: https://www.clug.org.za/
+
+- name: House 4 Hack
+  nick: H4H
+  url: http://www.house4hack.co.za/
