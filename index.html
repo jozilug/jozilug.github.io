@@ -3,67 +3,89 @@ layout: default
 ---
 
 <div class="row">
-  <div class="col-sm-4 col-sm-offset-2">
-    <img class="img-responsive img-centered"  src="/images/20130121_at_12h15m34s_714d0a48.jpg">
-  </div>
   <div class="col-sm-4">
-    <div class="text-centered">
-      <h4>The When and the Where</h4>
-      <p>We meet on the 3rd Monday of every month in Joburg.</p>
-      <p>New members are always welcome! Bring a friend! Bring two!</p>
+    <h4>Recent Posts</h4>
+    <ul>
+      {% for post in site.posts %}
+      <li>
+	<a href="{{ post.url }}">{{ post.title }} - <em>{{ post.date | date_to_string }}</em></a>
+      </li>
+      {% endfor %}
+    </ul>
+    <h4>Recent Meetups</h4>
+    <ul class="recentmeetups">
+
+    </ul>
+  </div>
+  <div class="col-sm-8">
+    <div class="row">
+      <div class="col-sm-6">
+	<img class="img-responsive img-centered"  src="/images/20130121_at_12h15m34s_714d0a48.jpg">
+      </div>
+      <div class="col-sm-6">
+	<div class="text-centered">
+	  <h4>The When and the Where</h4>
+	  <p>We meet on the 3rd Monday of every month in Joburg.</p>
+	  <p>New members are always welcome! Bring a friend! Bring two!</p>
+	</div>
+      </div>
     </div>
-  </div>
-</div>
 
-<div class="row">
-  <div class="col-sm-4 col-sm-push-4 col-sm-offset-2">
-    <img class="img-responsive img-centered" src="/images/20130520_at_12h15m28s_cdb1d22f.jpg">
-  </div>
-  <div class="col-sm-4 col-sm-pull-4">
-    <div class="text-centered">
-      <h4>The What</h4>
-      <p>Each meetup starts at 18:30 and consists of a short, accessible
-	talk on a topic related to Linux or Free or Open Source
-	software (FOSS), followed by dinner and drinks.</p>
-      <p>Stick around afterward and chat with
-	fellow <strike>geeks</strike> enthusiasts.</p>
+    <div class="row">
+      <div class="col-sm-6 col-sm-push-6">
+	<img class="img-responsive img-centered" src="/images/20130520_at_12h15m28s_cdb1d22f.jpg">
+      </div>
+      <div class="col-sm-6 col-sm-pull-6">
+	<div class="text-centered">
+	  <h4>The What</h4>
+	  <p>Each meetup starts at 18:30 and consists of a short, accessible
+	    talk on a topic related to Linux or Free or Open Source
+	    software (FOSS), followed by dinner and drinks.</p>
+	  <p>Stick around afterward and chat with
+	    fellow <strike>geeks</strike> enthusiasts.</p>
+	</div>
+      </div>
     </div>
-  </div>
-</div>
 
-<div class="row">
-  <div class="col-sm-4 col-sm-offset-2">
-    <img class="img-responsive img-centered" src="/images/20130121_at_12h14m02s_c3debfd9.jpg">
-  </div>
-  <div class="col-sm-4">
-    <div class="text-centered">
-      <h4>The Why</h4>
-      <p>We want to grow the GNU/Linux and FOSS community in South
-	Africa through informal chats about the technical topics that
-	interest us.</p>
-      <p>We're always looking for new contributors.  Let us know if
-	you'd like to give a talk, suggest a topic, or organize a
-	event.</p>
+
+    <div class="row">
+      <div class="col-sm-6">
+	<img class="img-responsive img-centered" src="/images/20130121_at_12h14m02s_c3debfd9.jpg">
+      </div>
+      <div class="col-sm-6">
+	<div class="text-centered">
+	  <h4>The Why</h4>
+	  <p>We want to grow the GNU/Linux and FOSS community in South
+	    Africa through informal chats about the technical topics that
+	    interest us.</p>
+	  <p>We're always looking for new contributors.  Let us know if
+	    you'd like to give a talk, suggest a topic, or organize a
+	    event.</p>
+	</div>
+      </div>
     </div>
-  </div>
-</div>
 
-<div class="row">
-  <div class="col-sm-4 col-sm-offset-1">
-  </div>
-  <div class="col-sm-4 col-sm-offset-1">
-    <div class="text-centered">
-      <a href="http://oreilly.com/ug/">
-	<img class="img-responsive img-centered" src="/images/ug_ad_250_camel.gif">
-      </a>
-
-      <h4>Regional LUGs</h4>
-      <p>Some other LUGs in and around South Africa:</p>
-      <ul>
-	<li><a href="http://www.linux.org.za/cgi-bin/mailman/listinfo">Gauteng Linux Users Group</a> (mailing list only)</li>
-	<li><a href="http://durbanlinux.co.za/">Durban Linux</a></li>
-	<li><a href="https://www.clug.org.za/">Cape Linux Users Group</a></li>
-      </ul>
+    <div class="row">
+      <div class="col-sm-6">
+      </div>
+      <div class="col-sm-6">
+	<div class="text-centered">
+	  <a href="http://oreilly.com/ug/">
+	    <img class="img-responsive img-centered" src="/images/ug_ad_250_camel.gif">
+	  </a>
+	  <h4>Regional LUGs</h4>
+	  <p>Some other techie user groups around South Africa:</p>
+	  <ul>
+	    {% for group in site.data.groups %}
+	    <li>
+	      <a href="{{ group.url }}">
+		{{ group.name }}
+	      </a> ({{ group.nick }})
+	    </li>
+	    {% endfor %}
+	  </ul>
+	</div>
+      </div>
     </div>
   </div>
 </div>

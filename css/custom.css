@@ -66,3 +66,7 @@ footer li + li {
     border-top: 1px solid rgb(238,238,238);
     border-bottom: 1px solid rgb(238,238,238);
 }
+
+span.textdate {
+    white-space: nowrap;
+}
