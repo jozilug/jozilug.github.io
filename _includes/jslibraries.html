@@ -1,3 +1,10 @@
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+{% if site.stage == 'dev' %}
+<script src="/js/jquery-1.11.1.js"></script>
+{% else %}
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+{% endif %}
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/jquery-colorbox-min.js"></script>
+<script src="/js/meetup.js"></script>
+<script src="http://api.meetup.com/2/events?status=past%2Cupcoming&order=time&limited_events=False&group_urlname=Jozi-Linux-User-Group-JLUG&desc=true&offset=0&format=json&page=200&fields=&sig_id=4556277&sig=10c1bbcd2108a87fde2fa9753b382e2e0a3fa8a2&callback=fetchevents"></script>
