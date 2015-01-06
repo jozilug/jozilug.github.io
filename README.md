@@ -10,7 +10,7 @@ framework.  It is hosted using GitHub Pages.
 In order to test the site on your own computer, you will first need to
 install Jekyll.  To do this you will need to have git, ruby
 development tools, and ([for the time
-being]https://github.com/jekyll/jekyll/issues/2327#issuecomment-55337023)
+being](https://github.com/jekyll/jekyll/issues/2327#issuecomment-55337023))
 nodejs installed:
 
     sudo apt-get install git ruby-dev nodejs
