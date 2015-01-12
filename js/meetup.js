@@ -23,6 +23,7 @@ var fetchevents = function(data) {
 }
 
 var listrecent = function(events) {
+    $("ul.recentmeetups").empty();
     $.each(events,function(key,past_event){
 	var link = "<li><a href=\"" + past_event.event_url + "\">" + past_event.name + "</a>" + "</li>";
 	$("ul.recentmeetups").append(link);
