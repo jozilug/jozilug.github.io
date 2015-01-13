@@ -4,7 +4,6 @@
     }
     .text-centered {
 	max-width: 400px;
-
     }
 }
 body {
@@ -45,6 +44,9 @@ body {
 @media (min-width: 768px) {
     .friendly {
 	display: none;
+    }
+    .recenttweets {
+	padding-left: 20px;
     }
 }
 footer ul {
