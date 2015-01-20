@@ -2,7 +2,7 @@
   nick: DBN-LUG
   url: http://durbanlinux.org.za
 
-- name: Gauteng Linux Users Group 
+- name: Gauteng Linux Users Group
   nick: GLUG
   url: http://www.linux.org.za/cgi-bin/mailman/listinfo
 
@@ -13,3 +13,7 @@
 - name: House 4 Hack
   nick: H4H
   url: http://www.house4hack.co.za/
+
+- name: Gauteng Python User Group
+  nick: GPUG
+  url: https://gautengpug.github.io/
