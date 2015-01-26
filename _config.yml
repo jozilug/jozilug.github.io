@@ -1,2 +1,3 @@
 permalink: /blog/:title.html
 paginate: 5
+timezone: Africa/Johannesburg
