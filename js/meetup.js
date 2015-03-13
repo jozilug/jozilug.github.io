@@ -1,31 +1,39 @@
+/*jslint indent: 2 */
 // Loads information about upcoming JoziLUG meetups via signed Meetup
 // API request loaded using JSONP method.  See:
 // http://en.wikipedia.org/wiki/JSONP
 
-// Author: Daniel Fowler
+"use strict";
 
-var fetchevents = function(data) {
-    var limit = 10;
-    var valid_events = data.results.filter(function(element){return (element.id != '168152892')}).splice(0,limit);
-    var upcoming_events = data.results.filter(function(element){return (element.status == 'upcoming')});
+var fetchevents = function (data) {
+  var events = data.results.filter(function (event) {
+    return (event.id !== '168152892');
+  });
+  var last = function (limit,events) {
+    return events.splice(0, limit);
+  };
+  var link = function (event) {
+    return "<a href=\"" + event.event_url + "\">" + event.name + "</a>";
+  };
+  var write_to = function (target, content) {
+    target.empty().append(content);
+  };
 
-    if (valid_events.length > 0) {
-	listrecent(valid_events);
-    };
+  // definitions
+  var upcoming_events = events.filter(function (event) {
+    return (event.status === 'upcoming');
+  });
+  var past_events = events.filter(function (event) {
+    return (event.status === 'past');
+  });
 
-    if (upcoming_events.length > 0) {
-	next_event = upcoming_events.reverse()[0];
-	var link = "Next up: <a href=\"" + next_event.event_url + "\">" + next_event.name + "</a>";
-	$("p.nextup").empty().append(link);
-    } else {
-	$("p.nextup").empty().append("No upcoming events. :(");
-    }
-}
-
-var listrecent = function(events) {
-    $("ul.recentmeetups").empty();
-    $.each(events,function(key,past_event){
-	var link = "<li><a href=\"" + past_event.event_url + "\">" + past_event.name + "</a>" + "</li>";
-	$("ul.recentmeetups").append(link);
-    });
-}
+  // push recent events
+  if (upcoming_events.length > 0) {
+    write_to($("p.nextup"), "Next up: " + link(upcoming_events.reverse()[0]));
+  } else {
+    write_to($("p.nextup"), "No upcoming events. :(");
+  }
+  write_to($("ul.recentmeetups"), last(10,past_events).map(function (event) {
+    return "<li>" + link(event) + "</li>";
+  }));
+};
