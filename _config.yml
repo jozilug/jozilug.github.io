@@ -1,3 +1,15 @@
 permalink: /blog/:title.html
 paginate: 5
 timezone: Africa/Johannesburg
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+  -
+    scope:
+      path: "blog"
+    values:
+      layout: "post"
